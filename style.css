@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	overflow: hidden;
+	background-image: url('./img/bg.jpeg');
+	background-size: cover;
+}
+
+img {
+	position: absolute;
+}
+
+.mailman {
+	width: 1000px;
+	bottom: -30%;
+	left: 10%;
+	transform: scale(0.3);
+	animation: mailman 2s 1s ease-in forwards;
+}
+
+.modal-dialog {
+	background-color: transparent;
+}
+div.modal-content {
+	background-color: #fff;
+}
+div.modal-body {
+	background-color: transparent;
+}
+
+div.modal-footer {
+	border: none;
+}
+
+p {
+	position: absolute;
+	top: 20%;
+	right: 5%;
+	font-size: 50px;
+	color: #fff;
+	text-shadow: 2px 2px 1px black;
+	opacity: 0;
+	animation: fadeout 2s 1s ease-in forwards;
+	z-index: 1000;
+	font-weight: bold;
+}
+
+.cook {
+	position: absolute;
+	bottom: -70%;
+	animation: manslide 3s 1s ease-in forwards;
+}
+
+.pizza {
+	width: 300px;
+	bottom: 43%;
+	left: -25%;
+	animation: pizzaslide 2s 2s ease-in forwards;
+}
+
+.hat {
+	width: 200px;
+	right: 30%;
+	top: -30%;
+	z-index: 1000;
+	animation: hatslide 3s 1s ease-in forwards;
+}
+
+h1 {
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	font-size: 50px;
+	color: #fff;
+	text-shadow: 2px 2px 1px black;
+	opacity: 0;
+	animation: fadeout 2s 1s ease-in forwards;
+	z-index: 1000;
+}
+
+@keyframes manslide {
+	from {
+		bottom: -70%;
+	}
+	to {
+		bottom: 0;
+	}
+}
+
+@keyframes pizzaslide {
+	from {
+		left: -25%;
+		transform: rotate(0deg);
+	}
+	to {
+		left: 38%;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes hatslide {
+	from {
+		top: -30%;
+	}
+	to {
+		top: 15%;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes mailman {
+	from {
+		transform: scale(0.3);
+		bottom: -30%;
+	}
+	to {
+		transform: scale(1);
+		bottom: 0;
+	}
+}
